@@ -137,7 +137,7 @@ static void bt_i2s_task_handler(void *arg)
 				pcmdata++;
 			}
             i2s_write(0, data, item_size, &bytes_written, portMAX_DELAY);
-            //i2s_write(1, data, item_size, &bytes_written, portMAX_DELAY);
+            i2s_write(1, data, item_size, &bytes_written, portMAX_DELAY);
             vRingbufferReturnItem(s_ringbuf_i2s,(void *)data);
         }
     }
